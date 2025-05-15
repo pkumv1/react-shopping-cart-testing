@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig } = require('@playwright/test');
+const { defineConfig, devices } = require('@playwright/test');
 
 /**
  * Playwright configuration for React Shopping Cart testing
@@ -80,7 +80,6 @@ module.exports = defineConfig({
       use: {
         browserName: 'chromium',
         ...devices['Pixel 5'],
-        viewport: { width: 375, height: 667 },
         screenshot: 'only-on-failure',
         trace: 'on-first-retry',
         baseURL: 'http://localhost:3000',
